@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 225 20% 93%;
+    --card: 222 22% 11%;
+    --card-foreground: 225 20% 93%;
+    --popover: 222 22% 11%;
+    --popover-foreground: 225 20% 93%;
+    --primary: 16 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 22% 15%;
+    --secondary-foreground: 225 20% 93%;
+    --muted: 222 22% 15%;
+    --muted-foreground: 222 18% 42%;
+    --accent: 222 22% 15%;
+    --accent-foreground: 225 20% 93%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 22% 16%;
+    --input: 222 22% 16%;
+    --ring: 16 100% 56%;
+    --radius: 0.75rem;
+    --sidebar-background: 222 22% 11%;
+    --sidebar-foreground: 225 20% 93%;
+    --sidebar-primary: 16 100% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 22% 15%;
+    --sidebar-accent-foreground: 225 20% 93%;
+    --sidebar-border: 222 22% 16%;
+    --sidebar-ring: 16 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-brand-bg text-brand-text font-sora;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-x {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
